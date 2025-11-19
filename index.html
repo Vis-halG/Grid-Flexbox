@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <navbar class="Nav">
-        <div class="nav-logo"><img src="https://www.puremagicevents.com/wp-content/uploads/2024/01/logo-pure-white.png" alt=""> <span></span> 
-        </div>
-    <ul>
+    <header>
+    <navbar >
+    <ul class="sideBar">
+        <li onclick="closeSideBar()" class="nav-logo "><img src="https://res.cloudinary.com/dwtn2kajc/image/upload/v1763536590/Screenshot_2025-11-19_124452-removebg-preview_gv8xut.png" alt=""> <svg class="closeSideBar" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
         <li>Home</li>
         <li>Services</li>
         <li>Gallery</li>
@@ -18,10 +18,39 @@
         <li>Testimonial</li>
         <li>FAQs</li>
         <li>Career</li>
+        <li class="Enquiry">Enquiry</li>
     </ul>
-
-<div class="Enquiry">Enquiry</div>
     </navbar>
+    <navbar class="Nav-one">
+    <ul>
+        <li class="nav-logo"><img src="https://res.cloudinary.com/dwtn2kajc/image/upload/v1763536590/Screenshot_2025-11-19_124452-removebg-preview_gv8xut.png" alt=""> </li>
+        <li>Home</li>
+        <li>Services</li>
+        <li>Gallery</li>
+        <li>Blog</li>
+        <li>Testimonial</li>
+        <li>FAQs</li>
+        <li>Career</li>
+        <li class="Enquiry">Enquiry</li>
+        <li onclick="showSideBar()" class="hamBurger"><svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 -960 960 960" width="30px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+    </ul>
+    </navbar>
+<script>
+function showSideBar(){
+    const sideBar = document.querySelector(".sideBar")
+    sideBar.style.display = "flex";
+}
+function closeSideBar(){
+    const sideBar = document.querySelector(".sideBar")
+    sideBar.style.display = "none";
+}
+</script>
+</header>
+
+
+<main>
+    
+</main>
 
 </body>
 </html>
