@@ -6,19 +6,28 @@
 
 body {
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: #fff;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
 }
 
+/* ---------------- NAVBAR ---------------- */
+
 .Nav-one {
+    position: fixed;
+    top: 10px; /* Correct way */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    /* max-width: 1350px; */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px 20px;
     background-color: #ffffff;
-    border: solid 1px black;
+    border: 1px solid black;
     border-radius: 100px;
-    margin: 10px;
+    z-index: 9999;
 }
 
 .nav-logo {
@@ -29,7 +38,6 @@ body {
 
 .nav-logo img {
     width: 120px;
-    height: auto;
 }
 
 ul {
@@ -50,9 +58,13 @@ li {
 .Nav-one li:first-child {
     margin-right: auto;
 }
+
+/* Hide nav items on mobile */
 .Nav-one li:not(.nav-logo):not(.Enquiry):not(.hamBurger) {
     display: none;
 }
+
+/* ---------------- ENQUIRY BUTTON ---------------- */
 
 .Enquiry {
     position: relative;
@@ -67,7 +79,6 @@ li {
 
 .Nav-one .Enquiry {
     display: none;
-    margin-left: initial; 
 }
 
 .Enquiry::before {
@@ -88,11 +99,15 @@ li {
     top: -14px;
 }
 
+/* ---------------- HAMBURGER ---------------- */
+
 .hamBurger {
     cursor: pointer;
     display: block;
     margin-left: auto;
 }
+
+/* ---------------- SIDEBAR ---------------- */
 
 .sideBar {
     position: fixed;
@@ -105,11 +120,8 @@ li {
     z-index: 999;
     display: none;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    text-align: center;
     padding: 20px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sideBar li {
@@ -120,7 +132,6 @@ li {
 
 .sideBar .nav-logo {
     margin-bottom: 20px;
-    border-bottom: none;
 }
 
 .closeSideBar {
@@ -128,13 +139,7 @@ li {
     cursor: pointer;
 }
 
-.sideBar .Enquiry {
-    text-align: center;
-    margin-top: 20px;
-    width: 80%;
-    align-self: center;
-}
-
+/* Desktop menu */
 @media (min-width: 950px) {
     .Nav-one li:not(.nav-logo):not(.Enquiry):not(.hamBurger) {
         display: block;
@@ -143,17 +148,61 @@ li {
     .hamBurger {
         display: none;
     }
+
     .Nav-one .Enquiry {
         display: block;
-        margin-left: 10px; 
-    }
-    
-    .Nav-one ul {
-        justify-content: center;
-    }
-    
-    .Nav-one ul li:not(.nav-logo):not(.Enquiry):not(.hamBurger) {
         margin-left: 10px;
-        margin-right: 10px;
     }
+}
+
+/* ---------------- MAIN CONTENT ---------------- */
+
+main {
+    margin-top: 120px; 
+}
+
+.product-List {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 20px;
+}
+/* ---------------- PRODUCT CARD ---------------- */
+
+
+.product-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(8px);
+    box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+        margin-bottom: 10px;
+}
+
+/* Title */
+.product-card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Price */
+.product-card p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #D80286;
 }
