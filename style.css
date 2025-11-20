@@ -11,23 +11,61 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* ---------------- NAVBAR ---------------- */
-
+/* ================= COUNSELLING BAR ================= */
+.counselling {
+    width: 100%;
+    background-color: #00D09C;
+    padding: 1px 0px;
+    text-align: center;
+    color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.counselling span:first-child{
+    flex: 1;
+    text-align: center;
+    color: #FFF;
+}
+.closeCounselling {
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+   
+}
+.counselling-button{
+    padding: 1px 10px;
+    font-size: 8px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    color: white;
+}
+/* ================= NAVBAR ================= */
 .Nav-one {
     position: fixed;
-    top: 10px;
+    top: 0;                   /* default TOP 0 */
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 20px);
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px 20px;
     background-color: #ffffff;
-    border: 1px solid black;
-    border-radius: 100px;
     z-index: 9999;
     font-size: 1rem;
+}
+
+/* when counselling bar is visible */
+.nav-with-counselling {
+    top: 20px;                /* pushes navbar down */
 }
 
 .nav-logo img {
@@ -60,45 +98,38 @@ li {
     display: none;
 }
 
-/* ---------------- LOGIN & REGISTER BUTTONS ---------------- */
-
+/* ================= LOGIN & REGISTER BUTTONS ================= */
 .button {
     color: #FFF;
     padding: 5px 26px;
-    /* border-radius: 8px; */
     cursor: pointer;
 }
 
-/* Login button */
 .login-btn {
     background-color:transparent;
     border: 2px solid #00D09C;
     color: #000;
 }
 
-/* Register button */
 .register-btn {
     background-color: #00D09C;
     border: 2px solid #00D09C;
-  margin: 5px;
+    margin: 5px;
 }
 
-/* Desktop show */
 .Nav-one .login-btn,
 .Nav-one .register-btn {
     display: none;
 }
 
-/* ---------------- HAMBURGER ---------------- */
-
+/* ================= HAMBURGER ================= */
 .hamBurger {
     cursor: pointer;
     display: block;
-    margin-left: 0;   /* FIXED for mobile spacing */
+    margin-left: 0;
 }
 
-/* ---------------- SIDEBAR ---------------- */
-
+/* ================= SIDEBAR ================= */
 .sideBar {
     position: fixed;
     top: 50px;
@@ -124,17 +155,8 @@ li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* MOBILE FIX – LOGIN & REGISTER INSIDE SIDEBAR */
-.sideBar .login-btn,
-.sideBar .register-btn {
-    width: 100%;
-    text-align: center;
-    /* margin: 10px 0; */
-    /* border-radius: 8px; */
-    padding: 10px;
-}
 
-/* DESKTOP */
+/* ================= DESKTOP ================= */
 @media (min-width: 1050px) {
     .Nav-one li:not(.nav-logo):not(.login-btn):not(.register-btn):not(.hamBurger) {
         display: block;
@@ -155,14 +177,12 @@ li {
     .Nav-one .login-btn,
     .Nav-one .register-btn {
         padding: 10px 16px;
-        /* font-size: 14px; */
     }
 }
 
-/* ---------------- MAIN CONTENT ---------------- */
-
+/* ================= MAIN CONTENT ================= */
 main {
-    margin-top: 120px;
+    margin-top: 140px; /* counselling + navbar height */
 }
 
 .product-List {
