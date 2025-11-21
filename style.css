@@ -241,8 +241,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent;
-    backdrop-filter: blur(8px);
+    background: red;
+    backdrop-filter: blur(5px);
+    margin-left: -12px;
 }
 
 .hear {
