@@ -8,7 +8,11 @@ body {
     min-height: 100vh;
     background-color: #fff;
     color: #000;
-    font-family: 'Courier New', Courier, monospace;
+
+  font-family: "Inter", sans-serif;
+
+
+    /* font-family: 'Courier New', Courier, monospace; */
     
 
     
@@ -51,14 +55,14 @@ body {
 .counselling {
     width: 100%;
     background-color: #00D09C;
-    padding: 1px 0px;
+    padding: 0.09vw;
     text-align: center;
     color: #000;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10000;
-    font-size: 2vh;
+    font-size: 0.8vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,13 +78,21 @@ body {
 .closeCounselling {
     cursor: pointer;
     margin-right: 10px;
-    color: #FFF;
+    color: #000000;
+    width: 0.5vw;
+    height: 0.5vw;
+border-radius: 50%;
+    background-color: aliceblue;
+    padding: 0.6vw;
+  display: flex;
+align-items: center;
+justify-content: center;
 
 }
 
 .counselling-button {
-    padding: 1px 10px;
-    font-size: 1.3vh;
+    padding:0px 5px ;
+    font-size: 0.7vw;
     background-color: transparent;
     border-radius: 4px;
     border: 1px solid #fff;
@@ -90,7 +102,7 @@ body {
 /* ================= NAVBAR ================= */
 .Nav-one {
     position: fixed;
-    top: 0;
+    top: 0vw;
     /* default TOP 0 */
     left: 50%;
     transform: translateX(-50%);
@@ -225,129 +237,369 @@ li {
 }
 
 
-main {
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: minmax(250px, 550px) 1fr;
 
-    align-items: flex-start;
-    gap: 40px;
-}
 
-.card {
-    position: relative;
-    width: 100%;
-    min-height: 90vh;
+
+
+main{
+    margin-top: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent;
-    backdrop-filter: blur(5px);
-    margin-left: -12px;
+    gap: 40px;
 }
 
-.hear {
-    background: linear-gradient(152.24deg, #5367FF 1.16%, #00D09C 100%);
-
-    width: calc(100% - 50px);
-    border-radius: 20px;
-    min-height: 90vh;
-    position: relative;
+.card{
 }
 
-.love {
-    position: absolute;
-    width: calc(100% - 50px);
-       min-height: 85vh;
-    background: rgb(255, 255, 255);
-    right: 0;
+.love{
+    padding: 3vw;
+    position: relative; 
+    height: 39vw;
+    width: 30vw;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto; 
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
 }
-
-.love img {
+.love img{
     width: 20vw;
 }
+.love h1{
+    font-size: 2vw;
+}
+.love p{
+    font-size: 1vw;
+    line-height:1.5vw;
+}
+.love::before {
+    content: ""; 
+    position: absolute;
+    width: 30vw;
+    height: 43vw;
+    top: -2vw; 
+    left: -2vw; 
+    background: linear-gradient(152.24deg, #5367FF 1.16%, #00D09C 100%);
 
-.love h1 {
-    margin-top: 1px;
-    font-size: 2rem;
+    border-radius: 10px; 
+    z-index: -1;
 }
 
-.love p {
-    margin-top: 20px;
-    font-size: 1rem;
-    line-height: 1.4;
-    color: #000;
+
+
+.form-container{
+    /* margin-left: -2vw; */
+    display: flex;
+    flex-direction: column;
+  width: 60vw;
+ 
+ 
 }
 
-.student {
-    background: #eee;
-    border-radius: 15px;
-    padding: 50px;
-    text-align: center;
+.form-title{
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 700;
+  margin-bottom: 2.2vw;
 }
 
-@media (max-width: 1050px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-    .love {
-        min-height: 80vw;
-        padding: 20px;
-    }
-    .love img {
-        width: 60vw;
-    }
-    .love h1 {
-        font-size: 2.2rem;
-        font-weight: 700;
-    }
-    .love p {
-        font-size: 1.1rem;
-        line-height: 1.4;
-    }
+.form-title span{
+  color: #01cc9f;
 }
 
-@media (max-width: 786px) {
-    .hear {
-        width: calc(100% - 30px);
-    }
-    .love {
-        width: calc(100% - 40px);
-        padding: 20px;
-    }
-    .love img {
-        width: 55vw;
-    }
-    .love h1 {
-        font-size: 2rem;
-    }
-    .love p {
-        font-size: 1.05rem;
-        line-height: 1.5;
-    }
+form label{
+  font-size: 1vw;
+  margin-bottom: 1px;
+  display: block;
 }
 
-@media (max-width: 480px) {
-    .love {
-        padding: 15px;
-    }
-    .love img {
-        width: 50vw;
-    }
-    .love h1 {
-        font-size: 1.6rem;
-    }
-    .love p {
-        font-size: 0.9rem;
-        line-height: 1.2;
-    }
+input, select{
+  width: 100%;
+  padding: 0.8vw 15px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 1vw;
+  outline: none;
+  transition: 0.3s;
 }
+
+input:focus, select:focus{
+  border-color: #00c89b;
+}
+
+.input-row{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 1.1vw;
+}
+
+.input-box{
+  width: 100%;
+}
+
+.full{
+  margin-bottom: 1.1vw;
+}
+
+.mobile-state .input-box:nth-child(1){
+  width: 40%;
+}
+
+.mobile-state .input-box:nth-child(2){
+  width: 60%;
+}
+.checkbox {
+  display: flex; 
+  align-items: center;
+  /* gap: 8px; */
+  margin-bottom: 0.5vw;
+}
+
+.checkbox span {
+    display: flex;
+    align-items: center;
+    font-size: 0.8vw;
+}
+
+.checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    /* Make it a perfect circle */
+    width: 16px; 
+    height: 16px;
+    border: 2px solid #01cc9f;
+    border-radius: 50%; /* 💡 SOLUTION: Makes the input element circular */
+    
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    margin: 0; 
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+/* Style the checkmark inside the custom circle */
+.checkbox input[type="checkbox"]::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #01cc9f;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Start hidden */
+    transition: transform 0.2s ease;
+}.checkbox input[type="checkbox"]:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.checkbox a {
+    color: #01cc9f;
+    text-decoration: none;
+    margin-left: 0.5vw;
+}
+
+.submit-btn{
+    padding: 0.5vw 1vw;
+    background: #ff7b00;
+    border: none;
+    color: white;
+    font-size: 1.1vw;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover{
+    background: #e56c00;
+}
+
+@media (max-width: 926px) {
+
+
+main{
+    flex-direction: column;
+    margin-top: 120px;
+}
+
+
+.love{
+   
+    height: 46vw;
+    width: 90vw;
+    
+}
+
+.love::before {
+   
+    width: 90vw;
+    height: 52vw;
+     top: -3vw; 
+    left: -3vw; 
+   
+}
+.love img{
+    width: 30vw;
+}
+.love h1{
+    font-size: 3.2vw;
+}
+.love p{
+    font-size: 2vw;
+    line-height:2.5vw;
+}
+
+
+.form-container{
+   
+  width: 90vw;
+ 
+ 
+}
+
+.form-title{
+  
+  font-size: 5vw;
+  margin-bottom: 5vw;
+}
+
+
+form label{
+  font-size: 2.5vw;
+ 
+}
+
+input, select{
+   padding: 1.5vw 15px;
+  font-size: 2vw;
+ 
+}
+
+.input-row{
+ 
+  gap: 10px;
+  margin-bottom: 2vw;
+
+}
+.full{
+  margin-bottom: 2vw;
+}
+
+.checkbox span {
+  
+    font-size: 1.7vw;
+}
+
+
+
+.submit-btn{
+    padding: 1vw;
+   
+    font-size: 2vw;
+    
+    width: 100%;
+}
+
+    }
+
+
+
+@media (max-width: 450px) {
+
+
+main{
+    flex-direction: column;
+}
+
+
+.love{
+   
+    height: 128vw;
+    width: 83vw;
+    
+}
+
+.love::before {
+   
+    width: 83vw;
+    height: 140vw;
+   top: -6vw;
+   left: -6vw;
+}
+.love img{
+    width: 60vw;
+    margin-bottom: 15px;
+}
+.love h1{
+    font-size: 6.2vw;
+    margin-bottom: 5px;
+}
+.love p{
+    font-size: 3.5vw;
+    line-height:4.5vw;
+}
+
+
+.form-container{
+  width: 90vw;
+
+ 
+}
+
+.form-title{
+  
+  font-size: 6vw;
+  margin-bottom: 6vw;
+  
+}
+
+
+form label{
+  font-size: 3vw;
+ 
+}
+
+input, select{
+   padding: 1.5vw 5px;
+  font-size: 2.5vw;
+ 
+}
+
+.input-row{
+ 
+  gap: 10px;
+  margin-bottom: 3vw;
+
+}
+.full{
+  margin-bottom: 3vw;
+}
+
+.checkbox span {
+  
+    font-size: 2.5vw;
+}
+
+
+
+.submit-btn{
+    padding: 1vw;
+   
+    font-size: 3vw;
+    
+    width: 100%;
+}
+
+    }
+
+
