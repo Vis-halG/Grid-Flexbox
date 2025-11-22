@@ -54,7 +54,8 @@ body {
 /* ================= COUNSELLING BAR ================= */
 .counselling {
     width: 100%;
-    height: 30px;
+    height: 28px;
+    font-size: 14px;
     background-color: #00D09C;
     /* padding: 0.09vw; */
     text-align: center;
@@ -80,8 +81,8 @@ body {
     cursor: pointer;
     margin-right: 10px;
     color: #000000;
-    width: 0.5vw;
-    height: 0.5vw;
+    /* width: 0.5vw; */
+    /* height: 0.5vw; */
 /* border-radius: 50%; */
     /* background-color: aliceblue; */
     /* padding: 0.6vw; */
@@ -93,7 +94,7 @@ justify-content: center;
 
 .counselling-button {
     padding:0px 5px ;
-    /* font-size: 0.7vw; */
+    font-size: 12px;
     background-color: transparent;
     border-radius: 4px;
     border: 1px solid #fff;
@@ -525,7 +526,7 @@ main{
 
 .love{
    
-    height: 128vw;
+    height: 138vw;
     width: 83vw;
     
 }
@@ -533,7 +534,7 @@ main{
 .love::before {
    
     width: 83vw;
-    height: 140vw;
+    height: 150vw;
    top: -6vw;
    left: -6vw;
 }
@@ -567,13 +568,13 @@ main{
 
 
 form label{
-  font-size: 3.4vw;
+  font-size: 4vw;
  
 }
 
 input, select{
-   padding: 2vw 5px;
-  font-size: 3vw;
+   padding: 3vw 5px;
+  font-size: 3.5vw;
  
 }
 
@@ -598,7 +599,7 @@ input, select{
 .submit-btn{
     padding: 2vw;
    
-    font-size: 3vw;
+    font-size: 4vw;
     
     width: 100%;
 }
