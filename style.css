@@ -697,14 +697,21 @@ input, select{
 
 
 .why{
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
+
+.why .mobile-Image{
+display: none;
 }
 .why h1{
     font-size: 3vw;
 }
 .universities {
+    margin-top: 30px;
     display: flex;
     align-items: center;
     width: 90vw;       
@@ -743,8 +750,10 @@ input, select{
 }
 
 .universities ul li img{
-    width: 2.5vw;       /* 🆕 icon correct size */
+    width: 2.5vw;  
+    margin-left: -10px;
 }
+
 
 @media (max-width:1450px) {
 
@@ -802,34 +811,70 @@ input, select{
 
 @media (max-width:450px) {
 
-.universities img{
-    width:35vw;   
+
+.why{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+.why .mobile-Image{
+    display: block;
+}
+.why .desktop-Image{
+    display: none;
+}
+.why h1{
+    font-size: 5vw;
+}
+.why p{
+    font-size: 3vw;
+    width: 90vw;
+}
+.universities {
+    display: flex;
+    flex-direction: column;
+   
+    width: 90vw;       
+    gap: 1vw;          
+}
+.universities .problem-1{
+    margin-top: -40px;
+}
+.universities img{
+    width: 60vw;        
+    max-width: 100%;  
+    height: auto;   
+}
+
 .universities h2{
-    font-size: 3.5vw;
-    margin-bottom: 1.5vw;
+    font-size: 4vw;
+    margin-bottom: 1vw;
 }
 
 .universities p{
     font-size: 3vw;   /* 🆕 Slightly increased so text won’t shrink too much */
     line-height: 3.5vw; /* 🆕 Better readability */
-    margin-bottom: 1.5vw;
-}
+    margin-bottom: 1vw;
+}                     
 
 .universities ul{
+    display: flex;
+    justify-content: center;
     display: inline-flex;
-   
-}  
-.universities ul{
- 
-    line-height: 0.8vw;
-  
+    line-height: 1vw;
+    list-style: none;
     padding: 0;
 }
 
 .universities ul li{
-    font-size: 2.6vw;  /* 🆕 Match with paragraph size */
-    
-    gap: 0vw;        /* 🆕 Better spacing */
+    font-size: 2.8vw;  /* 🆕 Match with paragraph size */
+    display: flex;
+    align-items: center;
+    gap: 0.1vw;        /* 🆕 Better spacing */
+}
+
+.universities ul li img{
+    width: 5.5vw;       /* 🆕 icon correct size */
 }
 }
