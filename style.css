@@ -626,12 +626,24 @@ input, select{
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* COMMON BEFORE STYLE */
 .mileStone div::before {
-   
+    content: "";
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
     top: -2vw;
     left: 7vw;
+    transform: translateX(-50%);
+    /* background-size: 60%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
+/* DIFFERENT ICONS */
 .mileStone .m1::before { background-image: url("images/Group.svg"); }
 .mileStone .m2::before { background-image: url("images/track_changes.svg"); }
 .mileStone .m3::before { background-image: url("images/school.svg"); }
@@ -656,27 +668,57 @@ input, select{
    
 }
 .mileStone div::before {
+   
    padding: 1vw;
     width: 4vw;
     height: 4vw;
     top: -3vw;
-    left: 9vw;  
+    left: 9vw;
+    transform: translateX(-50%);
+    /* background-size: 60%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
+
 }
 @media (max-width:450px) {
+       
+.mileStone{
+   
+    justify-content: space-evenly;
+   
+}
+
 .mileStone div {
-    width: 18vw; 
+    background-color: #ffffff;
+    width: 18vw;
+    
     padding: 2vw;
     padding-top: 12vw;
     font-size: 2vw;
+    position: relative;  
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+/* COMMON BEFORE STYLE */
 .mileStone div::before {
- 
+    content: "";
+    position: absolute;
    padding: 4vw;
     width: 4vw;
     height: 4vw;
     top: -4vw;
     left: 9vw;
-  
+    transform: translateX(-50%);
+    /* background-size: 60%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 }
