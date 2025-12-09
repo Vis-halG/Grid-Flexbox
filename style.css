@@ -596,7 +596,7 @@ h3 {
   width: 30px;
   background: #fff;
   padding: 1.5rem;
-  flex: 0 0 calc(60.3% - 1rem);
+  flex: 0 0 calc(46% - 1rem);
   margin: 10px;
   border-radius: 0.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.12);
@@ -605,7 +605,7 @@ h3 {
 
 @media (min-width: 600px) {
   .card {
-    flex: 0 0 calc(50% - 1rem);
+    flex: 0 0 calc(501% - 1rem);
   }
 }
 
@@ -667,6 +667,59 @@ h3 {
 }
 }
 
+
+
+.people-section {
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  /* gap: 1.2rem; */
+
+  .carousel {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+  
+  }
+  .people-row {
+   position: relative;
+
+   
+  }
+  .people-row img{
+    width: 340px;
+    height: auto;
+  }
+  .people-detail {
+    position: absolute;
+   bottom: clamp(2rem, 10vw, 3rem);
+
+    left: 50%;
+    transform: translateX(-50%);
+       color: #fff;    
+  }
+  .people-detail span {
+    margin: 0;
+    padding: 5px;
+    background-color: #5367ff;
+  }
+  .people-detail h4 {
+
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+.people-detail .stars {
+  margin: 10px 0;
+ width: 200px;
+}
+}
 @media (min-width: 768px) and (max-width: 1023px) {
   .Nav-one .login-btn,
   .Nav-one .register-btn {
