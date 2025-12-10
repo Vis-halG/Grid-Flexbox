@@ -852,17 +852,14 @@ h3 {
 }
 
 .contact-column p {
-  /* max-width: 320px; */
   margin: 10px auto 20px;
   color: #555;
   font-size: 0.9rem;
 }
 
-/* EMAIL FORM */
 .email-form-footer {
   display: flex;
   width: 100%;
-  /* max-width: 340px; */
   margin: auto;
 }
 
@@ -885,15 +882,12 @@ h3 {
   font-weight: 600;
   cursor: pointer;
 }
-
-/* FOOTER COLUMNS WRAPPER */
 .footer-column-grp {
   display: grid;
   gap: 30px;
   text-align: center;
 }
 
-/* SINGLE COLUMN */
 .footer-column h3 {
  
 }
