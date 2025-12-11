@@ -407,14 +407,7 @@ select:focus {
 .m3::before { background-image: url("images/school.svg"); }
 .m4::before { background-image: url("images/forum.svg"); }
 
-@media (min-width: 768px) {
-  
-}
 
-/* DESKTOP */
-@media (min-width: 1200px) {
-
-}
 
 .why {
   padding: 5vw;
