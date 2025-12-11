@@ -11,6 +11,21 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
+.submit-btn {
+  padding: 10px 10px;
+  background: #ff7b00;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: #e56c00;
+}
 /* ===== GLOBAL SCROLLBAR STYLE (Use this anywhere) ===== */
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -121,21 +136,17 @@ header li {
   display: none;
 }
 
-.button {
-  color: #FFF;
-  padding: 5px 26px;
-  cursor: pointer;
-}
+
 
 .login-btn {
   background-color: transparent;
-  border: 2px solid #00D09C;
+  border: 2px solid #ff7a00;
   color: #000;
 }
 
 .register-btn {
-  background-color: #00D09C;
-  border: 2px solid #00D09C;
+  background-color: #ff7a00;
+  border: 2px solid #ff7a00;
   margin: 5px;
 }
 
@@ -348,21 +359,7 @@ select:focus {
   margin-left: 0.5vw;
 }
 
-.submit-btn {
-  padding: 12px 16px;
-  background: #ff7b00;
-  border: none;
-  color: white;
-  font-size: 1.1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-  width: 100%;
-}
 
-.submit-btn:hover {
-  background: #e56c00;
-}
 /* ------------------ MILESTONE SECTION FIX ------------------ */
 
 .mileStone {
