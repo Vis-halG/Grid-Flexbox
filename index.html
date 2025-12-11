@@ -180,22 +180,28 @@
   <h2>Our Milestones</h2>
 
   <div class="milestone-grp">
-    <div class="m1">
-      <h3>5L+</h3>
-      <p>Total number of users</p>
-    </div>
-    <div class="m2">
-      <h3>100%</h3>
-      <p>Success rate</p>
-    </div>
-    <div class="m3">
-      <h3>1400+</h3>
-      <p>No. of University</p>
-    </div>
-    <div class="m4">
-      <h3>20K+</h3>
-      <p>No. of active discussion</p>
-    </div>
+
+  <div class="m1">
+  <h3 data-target="500000">5L+</h3>
+  <p>Total number of users</p>
+</div>
+
+<div class="m2">
+  <h3 data-target="100">100%</h3>
+  <p>Success rate</p>
+</div>
+
+<div class="m3">
+  <h3 data-target="1400">1400+</h3>
+  <p>No. of University</p>
+</div>
+
+<div class="m4">
+  <h3 data-target="20000">20K+</h3>
+  <p>No. of active discussion</p>
+</div>
+
+
   </div>
 </section>
 
@@ -306,7 +312,7 @@
         </div>
       </div>
 
-      <button class="google-btn">Write a review</button>
+        <button type="submit" class="submit-btn">Write a review</button>
 
     </div>
 
@@ -892,6 +898,64 @@
     }
 
 
+
+
+
+
+
+    
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const milestoneSection = document.querySelector(".mileStone");
+  const counters = document.querySelectorAll(".milestone-grp h3");
+  let hasAnimated = false;
+
+  const formatNumber = (value, finalText) => {
+    if (finalText.includes("L+")) {
+      return Math.floor(value / 100000) + "L+";
+    }
+    if (finalText.includes("K+")) {
+      return Math.floor(value / 1000) + "K+";
+    }
+    if (finalText.includes("%")) {
+      return Math.floor(value) + "%";
+    }
+    return Math.floor(value);
+  };
+
+  const startCounting = () => {
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      const finalText = counter.innerText.trim();
+      let count = 0;
+
+      // ⬇ NEW SLOW SPEED
+      const speed = target / 300;
+
+      const update = () => {
+        if (count < target) {
+          count += speed;
+          counter.innerText = formatNumber(count, finalText);
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = finalText;
+        }
+      };
+
+      update();
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !hasAnimated) {
+      hasAnimated = true;
+      startCounting();
+    }
+  }, { threshold: 0.4 });
+
+  observer.observe(milestoneSection);
+});
 
 
 // document.addEventListener("DOMContentLoaded", () => {
