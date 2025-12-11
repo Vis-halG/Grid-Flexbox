@@ -11,6 +11,26 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
+/* ===== GLOBAL SCROLLBAR STYLE (Use this anywhere) ===== */
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #ebe8e852;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 .counselling {
   width: 100%;
@@ -412,6 +432,7 @@ select:focus {
 .why {
   padding: 5vw;
   margin-top: 50px;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -477,12 +498,15 @@ select:focus {
 
 .google-section {
   padding: 5vw;
+  
   text-align: center;
 
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-
+.google-text{
+  margin-bottom: 2rem;
+}
   .google-row {
   display: flex;
   flex-direction: column;
@@ -510,6 +534,7 @@ select:focus {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  
 }
 
 .google-header img {
@@ -568,28 +593,7 @@ select:focus {
     scroll-behavior: smooth;
   }
 
-  .carousel::-webkit-scrollbar {
-    height: 6px;
-  }
 
-  .carousel::-webkit-scrollbar-track {
-    background: #e4e4e4;
-    border-radius: 10px;
-  }
-
-  .carousel::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-  }
-
-  .carousel::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-
-
-  .carousel::-webkit-scrollbar {
-    height: 10;
-  }
 
   .row {
     display: flex;
@@ -667,7 +671,9 @@ select:focus {
   text-align: center;
   flex-direction: column;
   /* gap: 1.2rem; */
-
+.people-text{
+  margin-bottom: 2rem;
+}
   .carousel {
     width: 100%;
     overflow-x: auto;
@@ -677,6 +683,7 @@ select:focus {
     padding-bottom: 1rem;
     scroll-behavior: smooth;
 
+    
   }
 
   .people-row {
@@ -1074,9 +1081,9 @@ select:focus {
     max-width: 1500px;
   }
   .why {
-    padding: 5vw;
-    margin-top: 50px;
-    display: flex;
+    /* padding: 5vw; */
+    /* margin-top: 50px; */
+    /* display: flex; */
     flex-direction: column;
   }
 
